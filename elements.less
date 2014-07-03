@@ -70,6 +70,11 @@
   border-top-left-radius: @topleft;
   .background-clip(padding-box);
 }
+.background-clip(@argument: padding-box) {
+  -moz-background-clip: @argument;
+  -webkit-background-clip: @argument;
+  background-clip: @argument;
+}
 .opacity(@opacity: 0.5) {
   -moz-opacity: @opacity;
   -khtml-opacity: @opacity;
@@ -148,9 +153,4 @@
 }
 .translate(@x:0, @y:0) {
   .transform(translate(@x, @y));
-}
-.background-clip(@argument: padding-box) {
-  -moz-background-clip: @argument;
-  -webkit-background-clip: @argument;
-  background-clip: @argument;
 }
